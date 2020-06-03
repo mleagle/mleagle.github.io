@@ -6,19 +6,38 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://www.ldyun.xyz">
-  <title>Archives: 2020 | 零度空间</title>
+  <title>Docker笔记 | 零度空间</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="A website for A-RSnippet Hexo Theme">
-<meta property="og:type" content="website">
-<meta property="og:title" content="零度空间">
-<meta property="og:url" content="http://www.ldyun.xyz/archives/2020/index.html">
+  <meta name="description" content="docker一、安装vagrant，virtualbox二、安装centos71、创建first-docker-centos7文件夹，并进入其中[目录路径不要有中文字符]2、在此目录下打开cmd，运行vagrant init centos&#x2F;7​    此时会在当前目录下生成Vagrantfile 3、运行vagrant up[注意不要运行，拉取远端的centos7太慢]   此时会找centos7">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker笔记">
+<meta property="og:url" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="零度空间">
-<meta property="og:description" content="A website for A-RSnippet Hexo Theme">
+<meta property="og:description" content="docker一、安装vagrant，virtualbox二、安装centos71、创建first-docker-centos7文件夹，并进入其中[目录路径不要有中文字符]2、在此目录下打开cmd，运行vagrant init centos&#x2F;7​    此时会在当前目录下生成Vagrantfile 3、运行vagrant up[注意不要运行，拉取远端的centos7太慢]   此时会找centos7">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101092108411.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101094721998.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101094756609.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101094847442.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101095637339.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101101126220.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101101435333.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101101513909.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101102205259.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101102531601.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101103344192.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101103640274.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101104125268.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101104711370.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101110719279.png">
+<meta property="og:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101114125683-1572583792480.png">
+<meta property="article:published_time" content="2020-06-03T00:53:41.000Z">
+<meta property="article:modified_time" content="2020-06-03T01:19:42.139Z">
 <meta property="article:author" content="码依枚">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/Docker%E7%AC%94%E8%AE%B0/image-20191101092108411.png">
   
     <link rel="alternative" href="/atom.xml" title="零度空间" type="application/atom+xml">
   
@@ -215,182 +234,350 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Docker笔记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/CentOS7%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85mysql/" class="archive-article-date">
-        <time datetime="2020-06-03T01:21:57.906Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Jun 3, 2020</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/CentOS7%E6%BA%90%E7%A0%81%E5%AE%89%E8%A3%85mysql/" target="_blank">CentOS7源码安装mysql</a>
   
+    <h1 class="article-title" itemprop="name">
+      Docker笔记
     </h1>
   
 
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/CentOS7%E5%AE%89%E8%A3%85redis/" class="archive-article-date">
-        <time datetime="2020-06-03T01:21:57.863Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Jun 3, 2020</time>
-</a>
-
-        </div>
-    	 
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/CentOS7%E5%AE%89%E8%A3%85redis/" target="_blank">CentOS7安装redis</a>
-  
-    </h1>
-  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/Centos7%E5%AE%89%E8%A3%85java%E7%8E%AF%E5%A2%83/" class="archive-article-date">
-        <time datetime="2020-06-03T01:21:57.813Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Jun 3, 2020</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/Centos7%E5%AE%89%E8%A3%85java%E7%8E%AF%E5%A2%83/" target="_blank">Centos7安装java环境</a>
-  
-    </h1>
-  
-
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 <a href="/Docker%E7%AC%94%E8%AE%B0/" class="archive-article-date">
         <time datetime="2020-06-03T00:53:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Jun 3, 2020</time>
 </a>
 
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.5k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">7分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h1 id="docker"><a href="#docker" class="headerlink" title="docker"></a>docker</h1><h4 id="一、安装vagrant，virtualbox"><a href="#一、安装vagrant，virtualbox" class="headerlink" title="一、安装vagrant，virtualbox"></a>一、安装vagrant，virtualbox</h4><h4 id="二、安装centos7"><a href="#二、安装centos7" class="headerlink" title="二、安装centos7"></a>二、安装centos7</h4><h5 id="1、创建first-docker-centos7文件夹，并进入其中-目录路径不要有中文字符"><a href="#1、创建first-docker-centos7文件夹，并进入其中-目录路径不要有中文字符" class="headerlink" title="1、创建first-docker-centos7文件夹，并进入其中[目录路径不要有中文字符]"></a>1、创建first-docker-centos7文件夹，并进入其中[目录路径不要有中文字符]</h5><h5 id="2、在此目录下打开cmd，运行vagrant-init-centos-7"><a href="#2、在此目录下打开cmd，运行vagrant-init-centos-7" class="headerlink" title="2、在此目录下打开cmd，运行vagrant init centos/7"></a>2、在此目录下打开cmd，运行vagrant init centos/7</h5><p>​    此时会在当前目录下生成Vagrantfile</p>
+<h5 id="3、运行vagrant-up-注意不要运行，拉取远端的centos7太慢"><a href="#3、运行vagrant-up-注意不要运行，拉取远端的centos7太慢" class="headerlink" title="3、运行vagrant up[注意不要运行，拉取远端的centos7太慢]"></a>3、运行vagrant up[注意不要运行，拉取远端的centos7太慢]</h5><p>   此时会找centos7的镜像，本地有就用本地的，本地没有就会拉取远端的</p>
+<h5 id="4、准备centos7的box"><a href="#4、准备centos7的box" class="headerlink" title="4、准备centos7的box"></a>4、准备centos7的box</h5><h6 id="1-选中命令行中提示的链接"><a href="#1-选中命令行中提示的链接" class="headerlink" title="(1)选中命令行中提示的链接"></a>(1)选中命令行中提示的链接</h6><p>比如: <a href="https://vagrantcloud.com/centos/boxes/7/versions/1905.1/providers/virtualbox.box" target="_blank" rel="noopener">https://vagrantcloud.com/centos/boxes/7/versions/1905.1/providers/virtualbox.box</a></p>
+<h6 id="2-复制到迅雷中下载"><a href="#2-复制到迅雷中下载" class="headerlink" title="(2)复制到迅雷中下载"></a>(2)复制到迅雷中下载</h6><h6 id="3-vagrant-box-add-centos-7-d-virtual-virtualbox-box"><a href="#3-vagrant-box-add-centos-7-d-virtual-virtualbox-box" class="headerlink" title="(3)vagrant box add centos/7 d:\virtual\virtualbox.box"></a>(3)vagrant box add centos/7 d:\virtual\virtualbox.box</h6><h6 id="4-vagrant-box-list-查看本地的box-这时候可以看到centos-7"><a href="#4-vagrant-box-list-查看本地的box-这时候可以看到centos-7" class="headerlink" title="(4)vagrant box list 查看本地的box[这时候可以看到centos/7]"></a>(4)vagrant box list 查看本地的box[这时候可以看到centos/7]</h6><h6 id="5、根据本地的centos7-box创建虚拟机"><a href="#5、根据本地的centos7-box创建虚拟机" class="headerlink" title="5、根据本地的centos7 box创建虚拟机"></a>5、根据本地的centos7 box创建虚拟机</h6><p>   vagrant up[打开virtual box，可以发现centos7创建成功]</p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101092108411.png" alt=""></p>
+<h6 id="6、-vagrant基本操作"><a href="#6、-vagrant基本操作" class="headerlink" title="6、  vagrant基本操作"></a>6、  vagrant基本操作</h6><h6 id="1-vagrant-ssh"><a href="#1-vagrant-ssh" class="headerlink" title="(1)vagrant ssh"></a>(1)vagrant ssh</h6><p>​    进入刚才创建的centos7中</p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101094721998.png" alt="image-20191101094721998"></p>
+<h6 id="2-vagrant-status"><a href="#2-vagrant-status" class="headerlink" title="(2)vagrant status"></a>(2)vagrant status</h6><p>​    查看centos7的状态</p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101094756609.png" alt="image-20191101094756609"></p>
+<h6 id="3-vagrant-halt"><a href="#3-vagrant-halt" class="headerlink" title="(3)vagrant halt"></a>(3)vagrant halt</h6><p>​    停止centos7</p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101094847442.png" alt="image-20191101094847442"></p>
+<h6 id="4-vagrant-destroy"><a href="#4-vagrant-destroy" class="headerlink" title="(4)vagrant destroy"></a>(4)vagrant destroy</h6><p>​    删除centos7</p>
+<h6 id="5-vagrant-status"><a href="#5-vagrant-status" class="headerlink" title="(5)vagrant status"></a>(5)vagrant status</h6><p>​    查看当前vagrant创建的虚拟机</p>
+<h6 id="6-Vagrantfile中也可以写脚本命令，使得centos7更加丰富"><a href="#6-Vagrantfile中也可以写脚本命令，使得centos7更加丰富" class="headerlink" title="(6)Vagrantfile中也可以写脚本命令，使得centos7更加丰富"></a>(6)Vagrantfile中也可以写脚本命令，使得centos7更加丰富</h6><p>​    但是要注意，修改了Vagrantfile，要想使正常运行的centos7生效，必须使用vagrant reload</p>
+<h4 id="三、终端连接虚拟机"><a href="#三、终端连接虚拟机" class="headerlink" title="三、终端连接虚拟机"></a>三、终端连接虚拟机</h4><h5 id="Ⅰ、-查看centos7相关信息"><a href="#Ⅰ、-查看centos7相关信息" class="headerlink" title="Ⅰ、  查看centos7相关信息"></a>Ⅰ、  查看centos7相关信息</h5><p>​    vagrant ssh-config<br>​    关注:Hostname Port IdentityFile  </p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101095637339.png" alt="image-20191101095637339"></p>
+<h5 id="Ⅱ、-Xshell连接（按照此方式目前未连接成功，待查验）"><a href="#Ⅱ、-Xshell连接（按照此方式目前未连接成功，待查验）" class="headerlink" title="Ⅱ、  Xshell连接（按照此方式目前未连接成功，待查验）"></a>Ⅱ、  Xshell连接（按照此方式目前未连接成功，待查验）</h5><p>​    IP:127.0.0.1<br>​    port:2222<br>​    用户名:vagrant<br>​    密码:vagrant<br>​    文件:Identityfile指向的路径  </p>
+<h5 id="Ⅲ、-使用root账户登录"><a href="#Ⅲ、-使用root账户登录" class="headerlink" title="Ⅲ、  使用root账户登录"></a>Ⅲ、  使用root账户登录</h5><p>​    sudo -i</p>
+<p>​    vi /etc/ssh/sshd_config</p>
+<p>​    修改PasswordAuthentication yes</p>
+<p>​    passwd修改密码</p>
+<p>​    systemctl restart sshd</p>
+<p>记录（重设置密码为：123456）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">D:\virtual\first-docker-centos7&gt;vagrant ssh</span><br><span class="line">Last login: Fri Nov  1 01:46:58 2019 from 10.0.2.2</span><br><span class="line">[vagrant@localhost ~]$ sudo -i</span><br><span class="line">[root@localhost ~]# vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</span><br><span class="line">[root@localhost ~]# passwd</span><br><span class="line">Changing password for user root.</span><br><span class="line">New password:</span><br><span class="line">BAD PASSWORD: The password is shorter than 8 characters</span><br><span class="line">Retype new password:</span><br><span class="line">passwd: all authentication tokens updated successfully.</span><br><span class="line">[root@localhost ~]# systemctl restart sshd</span><br><span class="line">[root@localhost ~]#</span><br></pre></td></tr></table></figure>
+
+<p>查看ip：ip a</p>
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101101126220.png" alt="image-20191101101126220"></p>
+<p>标注红色的地址即为远程登录的地址：</p>
+<p>使用SecureCRT连接：</p>
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101101435333.png" alt="image-20191101101435333"></p>
+<p>连接成功：</p>
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101101513909.png" alt="image-20191101101513909"></p>
+<p> 至此，使用vagrant+virtualbox搭建centos7完成，后面可以修改Vagrantfile对虚拟机进行相配置  </p>
+<h3 id="四、安装docker"><a href="#四、安装docker" class="headerlink" title="四、安装docker"></a>四、安装docker</h3><h5 id="1、-进入centos7"><a href="#1、-进入centos7" class="headerlink" title="1、  进入centos7"></a>1、  进入centos7</h5><p>​      vagrant ssh  </p>
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101102205259.png" alt="image-20191101102205259"></p>
+<h5 id="2、-卸载之前的docker"><a href="#2、-卸载之前的docker" class="headerlink" title="2、  卸载之前的docker"></a>2、  卸载之前的docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> sudo yum remove docker \</span><br><span class="line">docker-client \</span><br><span class="line">docker-client-latest \</span><br><span class="line">docker-common \</span><br><span class="line">docker-latest \</span><br><span class="line">docker-latest-logrotate \</span><br><span class="line">docker-logrotate \</span><br><span class="line">docker-engine</span><br></pre></td></tr></table></figure>
+
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101102531601.png" alt="image-20191101102531601"></p>
+<h5 id="3、-安装必要的依赖"><a href="#3、-安装必要的依赖" class="headerlink" title="3、  安装必要的依赖"></a>3、  安装必要的依赖</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install -y yum-utils \</span><br><span class="line">device-mapper-persistent-data \</span><br><span class="line">lvm2</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4、-设置阿里云镜像加入器"><a href="#4、-设置阿里云镜像加入器" class="headerlink" title="4、  设置阿里云镜像加入器"></a>4、  设置阿里云镜像加入器</h5><p>​    1）、登录阿里云控制台找到 <strong>容器镜像服务</strong> </p>
+<p>​    <img src="Docker%E7%AC%94%E8%AE%B0/image-20191101103344192.png" alt="image-20191101103344192"></p>
+<p>2）、配置</p>
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101103640274.png" alt="image-20191101103640274"></p>
+<p>代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo mkdir -p &#x2F;etc&#x2F;docker</span><br><span class="line"></span><br><span class="line">[vagrant@localhost ~]$  sudo tee &#x2F;etc&#x2F;docker&#x2F;daemon.json &lt;&lt;-&#39;EOF&#39; &#123;  &quot;registry-mirrors&quot;: [&quot;https:&#x2F;&#x2F;msdmyj7r.mirror.aliyuncs.com&quot;] &#125; EOF </span><br><span class="line"></span><br><span class="line">[vagrant@localhost ~]$ sudo systemctl daemon-reload</span><br><span class="line">[vagrant@localhost ~]$ sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="5、-设置docker仓库"><a href="#5、-设置docker仓库" class="headerlink" title="5、  设置docker仓库"></a>5、  设置docker仓库</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yum-config-manager \</span><br><span class="line">--add-repo \</span><br><span class="line">https:&#x2F;&#x2F;download.docker.com&#x2F;linux&#x2F;centos&#x2F;docker-ce.repo</span><br></pre></td></tr></table></figure>
+
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101104125268.png" alt="image-20191101104125268"></p>
+<h5 id="6、-安装docker"><a href="#6、-安装docker" class="headerlink" title="6、  安装docker"></a>6、  安装docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo yum install -y docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="7、-启动docker"><a href="#7、-启动docker" class="headerlink" title="7、  启动docker"></a>7、  启动docker</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo systemctl start docker &amp;&amp; sudo systemctl enable docker</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="8、-测试docker安装是否成功"><a href="#8、-测试docker安装是否成功" class="headerlink" title="8、  测试docker安装是否成功"></a>8、  测试docker安装是否成功</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo docker run hello-world</span><br></pre></td></tr></table></figure>
+
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101104711370.png" alt="image-20191101104711370"></p>
+<p>至此docker已经安装完成。</p>
+<h3 id="五、docker初体验"><a href="#五、docker初体验" class="headerlink" title="五、docker初体验"></a>五、docker初体验</h3><h5 id="1、-创建tomcat容器"><a href="#1、-创建tomcat容器" class="headerlink" title="1、  创建tomcat容器"></a>1、  创建tomcat容器</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ docker pull tomcat</span><br><span class="line">Using default tag: latest</span><br><span class="line">Got permission denied while trying to connect to the Docker daemon socket at unix:&#x2F;&#x2F;&#x2F;var&#x2F;run&#x2F;docker.sock: Post http:&#x2F;&#x2F;%2Fvar%2Frun%2Fdocker.sock&#x2F;v1.40&#x2F;images&#x2F;create?fromImage&#x3D;tomcat&amp;tag&#x3D;latest: dial unix &#x2F;var&#x2F;run&#x2F;docker.sock: connect: permission denied</span><br><span class="line">[vagrant@localhost ~]$ sudo docker pull tomcat</span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library&#x2F;tomcat</span><br><span class="line">9a0b0ce99936: Pull complete</span><br><span class="line">db3b6004c61a: Pull complete</span><br><span class="line">f8f075920295: Pull complete</span><br><span class="line">6ef14aff1139: Pull complete</span><br><span class="line">962785d3b7f9: Pull complete</span><br><span class="line">631589572f9b: Pull complete</span><br><span class="line">c55a0c6f4c7b: Pull complete</span><br><span class="line">379605d88e88: Pull complete</span><br><span class="line">e056aa10ded8: Pull complete</span><br><span class="line">6349a1c98d85: Pull complete</span><br><span class="line">Digest: sha256:77e41dbdf7854f03b9a933510e8852c99d836d42ae85cba4b3bc04e8710dc0f7</span><br><span class="line">Status: Downloaded newer image for tomcat:latest</span><br><span class="line">docker.io&#x2F;library&#x2F;tomcat:latest</span><br><span class="line">[vagrant@localhost ~]$ sudo docker run -d --name my-tomcat -p 9090:8080 tomcat</span><br><span class="line">1644501cbfff1a95fbec2550ce394ef69f4faedc8801cfd8ea90b3ff7e6f6cc1</span><br><span class="line">[vagrant@localhost ~]$</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="2、访问：（由于之前安装时的地址为：192-168-1-112，所以访问地址是：192-168-1-112：9090）"><a href="#2、访问：（由于之前安装时的地址为：192-168-1-112，所以访问地址是：192-168-1-112：9090）" class="headerlink" title="2、访问：（由于之前安装时的地址为：192.168.1.112，所以访问地址是：192.168.1.112：9090）"></a>2、访问：（由于之前安装时的地址为：192.168.1.112，所以访问地址是：192.168.1.112：9090）</h5><p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101110719279.png" alt="image-20191101110719279"></p>
+<p>说明创建tomcat并启动成功（注：可创建并映射多个tomcat，端口不同即可）。</p>
+<h5 id="3、再创建mysql容器（具体参数参照相关文档）："><a href="#3、再创建mysql容器（具体参数参照相关文档）：" class="headerlink" title="3、再创建mysql容器（具体参数参照相关文档）："></a>3、再创建mysql容器（具体参数参照相关文档）：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo docker run -d --name my-mysql -p 3301:3306 -e MYSQL_ROOT_PASSWORD&#x3D;123456 --privileged mysql</span><br><span class="line">Unable to find image &#39;mysql:latest&#39; locally</span><br><span class="line">latest: Pulling from library&#x2F;mysql</span><br><span class="line">80369df48736: Pull complete</span><br><span class="line">e8f52315cb10: Pull complete</span><br><span class="line">cf2189b391fc: Pull complete</span><br><span class="line">cc98f645c682: Pull complete</span><br><span class="line">27a27ac83f74: Pull complete</span><br><span class="line">fa1f04453414: Pull complete</span><br><span class="line">d45bf7d22d33: Pull complete</span><br><span class="line">3dbac26e409c: Pull complete</span><br><span class="line">9017140fb8c1: Pull complete</span><br><span class="line">b76dda2673ae: Pull complete</span><br><span class="line">bea9eb46d12a: Pull complete</span><br><span class="line">e1f050a38d0f: Pull complete</span><br><span class="line">Digest: sha256:7345ce4ce6f0c1771d01fa333b8edb2c606ca59d385f69575f8e3e2ec6695eee</span><br><span class="line">Status: Downloaded newer image for mysql:latest</span><br><span class="line">559fc57f7c53e17bfe404696578f916f9c78430446f79ed6f7cd1cc4d37f504c</span><br><span class="line">[vagrant@localhost ~]$ sudo docker ps</span><br><span class="line">CONTAINER ID        IMAGE               COMMAND                  CREATED              STATUS              PORTS                               NAMES</span><br><span class="line">559fc57f7c53        mysql               &quot;docker-entrypoint.s…&quot;   About a minute ago   Up About a minute   33060&#x2F;tcp, 0.0.0.0:3301-&gt;3306&#x2F;tcp   my-mysql</span><br><span class="line">1644501cbfff        tomcat              &quot;catalina.sh run&quot;        12 minutes ago       Up 12 minutes       0.0.0.0:9090-&gt;8080&#x2F;tcp              my-tomcat</span><br><span class="line">[vagrant@localhost ~]$</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="4、进入容器："><a href="#4、进入容器：" class="headerlink" title="4、进入容器："></a>4、进入容器：</h5><p>  docker exec -it containerid /bin/bash  </p>
+<p>列：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">[vagrant@localhost ~]$ sudo docker exec -it my-mysql &#x2F;bin&#x2F;bash</span><br><span class="line">root@559fc57f7c53:&#x2F;# mysql -uroot -p123456</span><br><span class="line">mysql: [Warning] Using a password on the command line interface can be insecure.</span><br><span class="line">Welcome to the MySQL monitor.  Commands end with ; or \g.</span><br><span class="line">Your MySQL connection id is 12</span><br><span class="line">Server version: 8.0.18 MySQL Community Server - GPL</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2019, Oracle and&#x2F;or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and&#x2F;or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type &#39;help;&#39; or &#39;\h&#39; for help. Type &#39;\c&#39; to clear the current input statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">+--------------------+</span><br><span class="line">4 rows in set (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="5、docker-相关命令："><a href="#5、docker-相关命令：" class="headerlink" title="5、docker 相关命令："></a>5、docker 相关命令：</h5><p>docker pull            拉取镜像到本地</p>
+<p>docker run            根据某个镜像创建容器</p>
+<p>-d                             让容器在后台运行，其实就是一个进程</p>
+<p>–name                  给容器指定一个名字</p>
+<p>-p                              将容器的端口映射到宿主机的端口</p>
+<p>docker exec -it     进入到某个容器中并交互式运行</p>
+<h3 id="六、-box的打包分发"><a href="#六、-box的打包分发" class="headerlink" title="六、  box的打包分发"></a>六、  box的打包分发</h3><h5 id="1、退出虚拟机"><a href="#1、退出虚拟机" class="headerlink" title="1、退出虚拟机"></a>1、退出虚拟机</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">D:\virtual\first-docker-centos7&gt;vagrant halt</span><br><span class="line">&#x3D;&#x3D;&gt; default: Attempting graceful shutdown of VM...</span><br><span class="line"></span><br><span class="line">D:\virtual\first-docker-centos7&gt;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、打包（-得到first-docker-centos7-box）"><a href="#2、打包（-得到first-docker-centos7-box）" class="headerlink" title="2、打包（  得到first-docker-centos7.box）"></a>2、打包（  得到first-docker-centos7.box）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">D:\virtual\first-docker-centos7&gt;vagrant package --output first-docker-centos7.box</span><br><span class="line">&#x3D;&#x3D;&gt; default: Clearing any previously set forwarded ports...</span><br><span class="line">&#x3D;&#x3D;&gt; default: Exporting VM...</span><br><span class="line">&#x3D;&#x3D;&gt; default: Compressing package to: D:&#x2F;virtual&#x2F;first-docker-centos7&#x2F;first-docker-centos7.box</span><br><span class="line"></span><br><span class="line">D:\virtual\first-docker-centos7&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="Docker%E7%AC%94%E8%AE%B0/image-20191101114125683-1572583792480.png" alt="image-20191101114125683"></p>
+<h5 id="3、-将first-docker-centos7-box添加到其他的vagrant环境中"><a href="#3、-将first-docker-centos7-box添加到其他的vagrant环境中" class="headerlink" title="3、  将first-docker-centos7.box添加到其他的vagrant环境中"></a>3、  将first-docker-centos7.box添加到其他的vagrant环境中</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\virtual\test-package-box&gt;vagrant box add first-docker-centos7 first-docker-centos7.box</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、-得到Vagrantfile"><a href="#4、-得到Vagrantfile" class="headerlink" title="4、  得到Vagrantfile"></a>4、  得到Vagrantfile</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\virtual\test-package-box&gt;vagrant init first-docker-centos7</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、-根据Vagrantfile启动虚拟机-此时可以得到和之前一模一样的环境，但是网络要重新配置"><a href="#5、-根据Vagrantfile启动虚拟机-此时可以得到和之前一模一样的环境，但是网络要重新配置" class="headerlink" title="5、  根据Vagrantfile启动虚拟机(  此时可以得到和之前一模一样的环境，但是网络要重新配置 )"></a>5、  根据Vagrantfile启动虚拟机(  此时可以得到和之前一模一样的环境，但是网络要重新配置 )</h5><h5 id="6、查验环境是否一致"><a href="#6、查验环境是否一致" class="headerlink" title="6、查验环境是否一致"></a>6、查验环境是否一致</h5>
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.png">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/Docker%E7%AC%94%E8%AE%B0/" target="_blank">Docker笔记</a>
-  
-    </h1>
-  
+      </a>
+    </div>
+    
 
-
-        <div class="article-info info-on-right">
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          码依枚
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://www.ldyun.xyz/Docker笔记/" title="Docker笔记" target="_blank">http://www.ldyun.xyz/Docker笔记/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
-          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
 
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+    
+
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://www.ldyun.xyz/Docker%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/hello-world/" class="archive-article-date">
-        <time datetime="2020-06-02T05:29:21.382Z" itemprop="datePublished"><i class="icon-calendar icon"></i>Jun 2, 2020</time>
-</a>
 
+
+<nav id="article-nav">
+  
+    <a href="/Centos7%E5%AE%89%E8%A3%85java%E7%8E%AF%E5%A2%83/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Centos7安装java环境
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/hello-world/" target="_blank">Hello World</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<section id="comments">
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname =
+    'hexo-a-rsnippet'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by
+      Disqus.</a></noscript>
+</section>
+
+
+
+
+
+
 
 
           </div>
@@ -431,8 +618,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
